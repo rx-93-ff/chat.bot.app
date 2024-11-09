@@ -1,6 +1,7 @@
 from dotenv import load_dotenv
 import os
 import google.generativeai as genai
+import streamlit as st 
 
 # .env 파일 로드
 load_dotenv()
@@ -10,6 +11,7 @@ api_key = os.getenv("GOOGLE_API_KEY")
 
 # API 키 설정
 genai.configure(api_key=api_key)
+
 if api_key is None:
     print("API key not found!")
 else:
